@@ -1,0 +1,86 @@
+/* Styles for the entire section */
+.diamond-text {
+	color: #48CFCB;
+}
+
+.bronze-text {
+	color: #CD7F32;
+}
+
+.gold-text {
+	color: #FFD700;
+}
+
+/* Styles for each container in the order they appear in the HTML file */
+.services {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 1rem;
+	padding: 2rem;
+}
+
+.services h1 {
+	font-size: 2.5rem;
+	color: #48CFCB;
+	padding: 2rem;
+	text-shadow: 0 0 4px #000000;
+}
+
+.services-about {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 1rem;
+	width: 100%;
+	background-color: #424242;
+	border-radius: 1rem;
+	box-shadow: 0 4px 20px #000000;
+	padding: 1rem;
+}
+
+.services-about > * {
+	width: 100%;
+	font-style: italic;
+}
+
+.services-about > hr {
+	border: 1px solid white;
+	width: 90%;
+}
+
+.services-about-p1, .services-about-p1 > span {
+	font-size: 1.5rem;
+}
+
+.services-about-p2, .services-about-p2 > span {
+	font-size: 1.25rem;
+}
+
+.services-packages-list {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	gap: 1rem;
+	width: 100%;
+}
+
+.services-package {
+	width: 100%;
+	padding: 2rem;
+	background-color: #424242;
+	border-radius: 1rem;
+	box-shadow: 0 4px 20px #000000;
+}
+
+.services-package > hr {
+	border: 1px solid white;
+	width: 90%;
+}
+
+ul {
+	list-style: none;
+}

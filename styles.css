@@ -34,10 +34,11 @@ h4 {
 .navbar {
     background-color: #424242;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     min-height: 75px;
     width: 100%;
+	padding: 0.5rem;
 }
 
 .navbar-container {
