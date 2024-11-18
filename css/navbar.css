@@ -1,0 +1,113 @@
+.navbar {
+    background-color: #424242; 
+    display: flex; 
+    justify-content: space-evenly; 
+    align-items: center; 
+    padding: 10px; 
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 75px;
+ 
+}
+
+.hamburger {
+    border: none;
+    background-color: transparent;
+    height: 30px;
+}
+
+.sidebar {
+    background-color: rgba(66, 66, 66, 0.2);
+    backdrop-filter: blur(15px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    flex-direction: column;
+    gap: clamp(.75rem, 5vw, 2rem);
+    height: 100vh;
+    list-style: none;
+    padding: 2vh 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 999;
+}
+
+.navbar-list,
+.navbar-list li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    list-style: none;
+    transition: color 0.3s ease;
+    gap: 2.5vw;
+}
+
+
+.navbar-list-item {
+    width: 100%;
+}
+
+
+.navbar-list-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: .5 1 clamp(.90rem, 115px, 1rem);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.navbar-logo {
+    min-width: 25px;
+    max-width: 75px;
+    min-height: 25px;
+    max-height: 75px;
+}
+
+.navbar-list-link:hover {
+    background-color: #f5f5f525;
+    color: #48CFCB;
+}
+
+.navbar-list-button {
+
+    padding: 12px 24px;
+    font-size: clamp(.5rem, .75vw, .75rem);
+
+    min-width: 150px;
+    width: 100%; 
+    border: 0.25vw solid #48CFCB;
+    border-radius: 2vw;
+    cursor: pointer;
+    text-align: center;
+    color: #fff;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    
+    background-color: #48CFCB;
+    
+    box-shadow: 0px 0.5vw 0.75vw rgba(0, 0, 0, 0.1);
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.navbar-list-button:hover {
+    background: radial-gradient(circle, rgba(72,207,203,0.75) 50%, rgba(30,140,140,0) 100%);
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
+    transform: scale(1.03); 
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.navbar-list-button:active {
+    background: radial-gradient(circle, rgba(72,207,203,1) 25%, rgba(25,125,125,0) 100%);
+    transform: translateY(2px) scale(0.98); 
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.2s ease, transform 0.1s ease;
+}

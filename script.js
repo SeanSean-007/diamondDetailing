@@ -1,54 +1,30 @@
-// Constants for breakpoints
-const DESKTOP_WIDTH = 800;
-const TABLET_WIDTH = 500;
-
-// Select DOM elements with descriptive names
-const navbarList = document.querySelector('.navbar-list');
-const hamburgerMenuButton = document.querySelector('.hamburger');
-const sidebarMenu = document.querySelector('.sidebar');
-
 // Function to show the sidebar
 function showSidebar() {
-    hamburgerMenuButton.style.display = "none";
-    navbarList.style.display = "none"; 
-    sidebarMenu.style.display = "flex"; 
+    document.querySelector('.hamburger').style.display = "none";
+    document.querySelector('.navbar-list').style.display = "none"; 
+    document.querySelector('.sidebar').style.display = "flex"; 
 }
 
 // Function to close the sidebar
 function closeSidebar() {
-    hamburgerMenuButton.style.display = "block";
-    sidebarMenu.style.display = "none"; 
+    document.querySelector('.hamburger').style.display = "block";
+    document.querySelector('.sidebar').style.display = "none"; 
 }
 
-// Function to update the display based on window width
-function updateDisplay() {
-    if (window.innerWidth >= DESKTOP_WIDTH) {
-        console.log('This could be a desktop.');
-        navbarList.style.display = "flex";
-        hamburgerMenuButton.style.display = "none";
-        sidebarMenu.style.display = "none"; 
-    } else if (window.innerWidth >= TABLET_WIDTH) {
-        console.log('This could be a tablet.');
-        navbarList.style.display = "none"; 
-        hamburgerMenuButton.style.display = "flex"; 
-        sidebarMenu.style.width = "75%"; 
-        sidebarMenu.style.display = "none"; 
-    } else {
-        console.log('This could be a phone.');
-        navbarList.style.display = "none"; 
-        hamburgerMenuButton.style.width = "100%"; 
-        hamburgerMenuButton.style.display = "flex"; 
-        sidebarMenu.style.width = "100%"; 
-        sidebarMenu.style.display = "none"; 
+const checkWindowSize = () => {
+    if (window.innerWidth <= `800`) {
+        document.querySelector('.sidebar').style.display = "none"; 
+    document.querySelector('.navbar-list').style.display = "none"; 
+    document.querySelector('.hamburger').style.display = "flex";
+    } else if (window.innerWidth >= `800`) {
+        document.querySelector('.sidebar').style.display = "none"; 
+        document.querySelector('.navbar-list').style.display = "flex"; 
+        document.querySelector('.hamburger').style.display = "none";
     }
 }
 
-// Initialize display settings on page load
-updateDisplay();
-
-// Event listener to update display on window resize
-window.addEventListener('resize', updateDisplay);
-
-// Optional: You can add event listeners for the hamburger button to show/hide the sidebar
-hamburgerMenuButton.addEventListener('click', showSidebar);
-sidebarMenu.addEventListener('click', closeSidebar); // Assuming you want to close the sidebar when clicking on it
+// Event listeners for the hamburger button to show/hide the sidebar
+document.querySelector('.hamburger').addEventListener('click', showSidebar);
+document.querySelector('.sidebar').addEventListener('click', closeSidebar);
+document.addEventListener("DOMContentLoaded", checkWindowSize())
+window.addEventListener('resize', checkWindowSize);

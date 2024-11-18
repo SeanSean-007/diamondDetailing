@@ -1,0 +1,76 @@
+.hero {
+    background-image: radial-gradient(circle, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.249) 100%), url("../images/Hero.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 75vh;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 0 24px;
+
+}
+
+.hero-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 40vh;
+    gap: 25px;
+}
+
+#h1 {
+    line-height: 1.2;
+    font-weight: 600;
+}
+
+.hero h2 {
+    color: white;
+    max-width: 80%;
+    line-height: 1.4;
+    font-weight: 400;
+}
+
+.buttons-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    width: 100%;
+    max-width: 500px;
+}
+
+.hero-button {
+    padding: 12px 48px;
+    font-size: clamp(0.75rem, 2.5vw, 1.25rem);
+    border: 2px solid #48CFCB;
+    border-radius: 50px;
+    cursor: pointer;
+    color: white;
+    background-color: #48CFCB;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    flex: 1 1 45%;
+    width: 50%;
+
+}
+
+.hero-button:hover {
+    background: radial-gradient(circle, rgba(72,207,203,0.75) 50%, rgba(30,140,140,0) 100%);
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
+    transform: scale(1.03); 
+}
+
+.hero-button:active {
+    background: radial-gradient(circle, rgba(72,207,203,1) 25%, rgba(25,125,125,0) 100%);
+    transform: translateY(2px) scale(0.98); 
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1);
+}
